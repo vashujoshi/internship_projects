@@ -3,7 +3,7 @@ const Users=[];
 function userjoin(id,username,room){
     //const avatarUrl = `https://api.dicebear.com/9.x/pixel-art/svg?seed=
     //${username}`;
- const user={id,username,room}
+const user={id,username,room}
 Users.push(user);
 return user;
 }

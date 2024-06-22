@@ -255,7 +255,7 @@ const textnodes = [
             }
         ]
     },
-    {
+    {   
         id: 15,
         text: 'You started a business, faced many challenges but eventually became a successful entrepreneur.',
         options: [
