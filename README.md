@@ -2,7 +2,7 @@
    
    1 open server.js
    
-    2.RUN in terminal -npm run dev
+    2.RUN in terminal -> npm run dev
    
    3.local host 3000 will start
    
