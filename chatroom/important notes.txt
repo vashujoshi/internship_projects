@@ -1,0 +1,6 @@
+1.so websocket protocol helps us to do bi-directional real time  communication it open door btween client and server.
+2.WE can download dev dependencies as npm install -D nodemon(ex)
+nodemon is downloaded so we do not have to restart server again and again
+in script nodemon server  and server.js
+we are directly using server as we want to use socket.io
+io.emit to emit to everyone
