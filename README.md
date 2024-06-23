@@ -15,3 +15,8 @@
    7 join same chat room from different tabs 
   
    8 you are good to go
+
+EXTRA-
+firebase authentication has been made as a separate page and not used with the main project as it was causing issues with the project and making the main login page very complicated
+
+   
