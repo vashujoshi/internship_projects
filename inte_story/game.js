@@ -2,6 +2,8 @@
 const textelement = document.getElementById('text');
 const optionbuttonelement = document.getElementById('option-buttons');
 
+
+
 // State object to keep track of the game's current state.
 let state = {};
 
@@ -116,7 +118,55 @@ const textnodes = [
     },
     {
         id: 4,
-        text: 'YOU died fighting with your wife',
+        text: 'You and your wife have a serious conversation about your relationship.',
+        options: [
+            {
+                text: 'Try to resolve the issues peacefully',
+                setState: { wife: true, resolve: true },
+                nextText: 23
+            },
+            {
+                text: 'The argument escalates into a fight',
+                setState: { wife: true, fight: true },
+                nextText: 24
+            }
+        ]
+    },
+    {
+        id: 23,
+        text: 'You and your wife managed to talk things through and decided to work on your relationship.',
+        options: [
+            {
+                text: 'Focus on improving communication',
+                setState: { resolve: true, communicate: true },
+                nextText: 25
+            },
+            {
+                text: 'Go to couple’s therapy',
+                setState: { resolve: true, therapy: true },
+                nextText: 26
+            }
+        ]
+    },
+    {
+        id: 24,
+        text: 'The argument escalates into a fight and you end up getting hurt. Your wife leaves you.',
+        options: [
+            {
+                text: 'Try to win her back',
+                setState: { fight: true, winback: true },
+                nextText: 27
+            },
+            {
+                text: 'Accept the separation and move on',
+                setState: { fight: true, moveon: true },
+                nextText: 28
+            }
+        ]
+    },
+    {
+        id: 25,
+        text: 'By focusing on improving communication, your relationship strengthens and you both find happiness.',
         options: [
             {
                 text: 'Restart',
@@ -124,6 +174,123 @@ const textnodes = [
             }
         ]
     },
+    {
+        id: 26,
+        text: 'Couple’s therapy helps you both understand each other better, leading to a happier marriage.',
+        options: [
+            {
+                text: 'Restart',
+                nextText: -1
+            }
+        ]
+    },
+    {
+        id: 27,
+        text: 'Despite your efforts, your wife decides not to come back. You eventually find peace and move on.',
+        options: [
+            {
+                text: 'Restart',
+                nextText: -1
+            }
+        ]
+    },
+    {
+        id: 28,
+        text: 'You accept the separation, focus on self-improvement, and eventually find new love.',
+        options: [
+            {
+                text: 'Restart',
+                nextText: -1
+            }
+        ]
+    },
+    {
+        id: 5,
+        text: 'You are playing with your kids and having a great time.',
+        options: [
+            {
+                text: 'Teach them something new',
+                setState: { kids: true, teach: true },
+                nextText: 29
+            },
+            {
+                text: 'Take them on an adventure',
+                setState: { kids: true, adventure: true },
+                nextText: 30
+            }
+        ]
+    },
+    {
+        id: 29,
+        text: 'You teach your kids a new skill and they love it. They appreciate your effort and you bond more.',
+        options: [
+            {
+                text: 'Continue bonding with your kids',
+                nextText: 31
+            },
+            {
+                text: 'Focus on their education',
+                nextText: 32
+            }
+        ]
+    },
+    {
+        id: 30,
+        text: 'You take your kids on an adventure, but an accident happens and you get hurt.',
+        options: [
+            {
+                text: 'Seek medical help immediately',
+                setState: { adventure: true, accident: true },
+                nextText: 33
+            },
+            {
+                text: 'Try to handle it yourself',
+                setState: { adventure: true, accident: true },
+                nextText: 34
+            }
+        ]
+    },
+    {
+        id: 31,
+        text: 'You continue to bond with your kids, creating many happy memories together.',
+        options: [
+            {
+                text: 'Restart',
+                nextText: -1
+            }
+        ]
+    },
+    {
+        id: 32,
+        text: 'You focus on their education, helping them achieve great success in life.',
+        options: [
+            {
+                text: 'Restart',
+                nextText: -1
+            }
+        ]
+    },
+    {
+        id: 33,
+        text: 'You seek medical help immediately, and you recover quickly. Your kids learn the importance of safety.',
+        options: [
+            {
+                text: 'Restart',
+                nextText: -1
+            }
+        ]
+    },
+    {
+        id: 34,
+        text: 'You try to handle it yourself, but things get worse. You eventually need medical help, and it’s a tough lesson learned.',
+        options: [
+            {
+                text: 'Restart',
+                nextText: -1
+            }
+        ]
+    },
+    
     {
         id: 5,
         text: 'YOUR kids are naughty and they killed you accidentally by throwing a rock at your head',

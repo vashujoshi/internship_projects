@@ -4,25 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Text Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    
 </head>
 <body>
     <!-- defer is important as This Boolean attribute is set to indicate to a browser that the script is meant to be executed after the document has been parsed, but before firing DOMContentLoaded. 
-    basically dynamic changes type
-    -->
-<script defer src="game.js"></script>
+    basically dynamic changes type -->
+    <script defer src="game.js"></script>
     <!-- GETTING BASIC STRUCTURE OF THE MAIN PAGE -->
-  <div class="container">
-      <!--  MESSAGE AREA -->
-    <div id="text">story</div>
-    <div id="option-buttons"  class="btn-grid">
-    <button class="btn">option1</button>
-    <button class="btn">option2</button>
-    <button class="btn">option3</button>
-    <button class="btn">option4</button>
+    <div class="container">
+        <!-- Icon pointing to options -->
+        <i class="fas fa-hand-point-right pointer-icon"></i>
+        <div class="content">
+            <!-- MESSAGE AREA -->
+            <div id="text">Story</div>
+            <div id="option-buttons" class="btn-grid">
+                <button class="btn">Option 1</button>
+                <button class="btn">Option 2</button>
+                <button class="btn">Option 3</button>
+                <button class="btn">Option 4</button>
+            </div>
+        </div>
     </div>
-  </div>
-
 </body>
 </html>
