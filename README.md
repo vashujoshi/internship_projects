@@ -12,7 +12,7 @@ Firebase authentication is working but has been made as a separate page and not 
    
    
    
-   How to run the chat app
+# How to run the chat app
    
    1 open server.js
    
