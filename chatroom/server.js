@@ -58,9 +58,20 @@ const user =getcurrentuser(socket.id);
     io.to(user.room).emit('roomUsers', {
       room: user.room,
       users: getRoomUser(user.room)
-    });
+      });
     }); 
-
+    // socket.on('disconnect', () => {
+    //   const user = userleave(socket.id);
+    //   if (user) {
+    //     io.to(user.room).emit('message', formatMessage(BOT, `${user.username} has left the chat`));
+    //
+    //     // when someone left update the sidebar 
+    //     io.to(user.room).emit('roomUsers', {
+    //       room: user.room,
+    //       users: getRoomUser(user.room)
+    //     });
+    //   }
+    // });   
 });
 
 const PORT = process.env.PORT || 3000; // Check environment variable port

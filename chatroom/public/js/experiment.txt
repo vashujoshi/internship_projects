@@ -1,0 +1,45 @@
+// FIREBASE PART
+document.getElementById('login-btn').addEventListener('click', loginUser);
+document.getElementById('signup-btn').addEventListener('click', signupUser);
+
+function loginUser() {
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+  firebase.auth().signInWithEmailAndPassword(email, password)
+    .then(userCredential => {
+      console.log('User logged in:', userCredential.user);
+      document.getElementById('login-container').style.display = 'none';
+      document.getElementById('chat-container').style.display = 'block';
+      initializeChat(userCredential.user); // Initialize chat with user info
+    })
+    .catch(error => {
+      console.error('Error logging in:', error);
+    });
+}
+
+function signupUser() {
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+  firebase.auth().createUserWithEmailAndPassword(email, password)
+    .then(userCredential => {
+      console.log('User signed up:', userCredential.user);
+      document.getElementById('login-container').style.display = 'none';
+      document.getElementById('chat-container').style.display = 'block';
+      initializeChat(userCredential.user); // Initialize chat with user info
+    })
+    .catch(error => {
+      console.error('Error signing up:', error);
+    });
+}
+
+// Check if user is logged in on page load
+firebase.auth().onAuthStateChanged(user => {
+  if (user) {
+    document.getElementById('login-container').style.display = 'none';
+    document.getElementById('chat-container').style.display = 'block';
+    initializeChat(user); // Initialize chat with user info
+  } else {
+    document.getElementById('login-container').style.display = 'block';
+    document.getElementById('chat-container').style.display = 'none';
+  }
+});
