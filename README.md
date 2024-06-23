@@ -18,7 +18,7 @@ Firebase authentication is working but has been made as a separate page and not 
    
     2.RUN in terminal -> npm run dev
    
-   3.local host 3000 will start
+   3.SERVER running on port 3000 will be shown in terminal in green.
    
    4 go to chrome 
    
