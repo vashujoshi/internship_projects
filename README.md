@@ -22,7 +22,7 @@ Firebase authentication is working but has been made as a separate page and not 
    
    4 go to chrome 
    
-   5 type http://local host 3000
+   5 type http://localhost:3000
   
    6 duplicate the homepage tab so that differnt users can be created
   
